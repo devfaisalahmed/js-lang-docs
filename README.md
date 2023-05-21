@@ -23,6 +23,7 @@
     ```  
 
 | name | value |  
+| ----- | ------ |  
 | string | ``` var str = "Faisal ahmed";``` |  
 
 # Non primitive
