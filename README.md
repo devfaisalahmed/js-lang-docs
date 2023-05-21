@@ -95,3 +95,39 @@ do {
 
 ```  
 # function  
+# Object  
+```javascript
+var Person = {
+  names: "Faisal Ahmed",
+  age: 23,
+  city: "mymensingh",
+};
+document.write(Person.age)
+```
+# Array 
+```javascript
+var a = ["a", "b", "c"];
+var b = ["d", "e", "f"];
+
+document.write(b.concat(a));
+``` 
+স্ট্রিং থেকে এরে তে কনভার্ট করতে হলেঃ   
+
+```javascript
+ স্ট্রিং থেকে এরে তে কনভার্ট করতে হলেঃ Array.from(strName); 
+ var numArray = [10, 15, 20, 25, 30, 35, 40, 50, 55];
+var result = numArray.filter(function (item) {
+  return item < 25;
+});
+document.write(result);
+find এর সাহায্যে এরে এর মধ্যে থেকে কোন কিচু খুজে বের করা যাই ; আবার findindex এর সাহায্যে তার ইন্ডেক্স নাম্বার বের করা যাই;
+numArray.forEach(function (item) {
+  document.write(item + "<br/>");
+});
+includes,
+includes মেথড এর মাধ্মে তার মধ্যে কোন নিরদিস্ট ডাটা আচে কিনা তে জানা জাই \  আবার indexOf মেথড এর মাধ্মে এরে তে ডাটা থাকলে তার ইন্ডক্স নাম্বার রিটরন করবে না থাকলে -1 
+
+
+
+
+```

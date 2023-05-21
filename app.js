@@ -1,17 +1,10 @@
-for (var i = 0; i <= 10; i = i + 1) {
-  if (i == 5 || i == 8) {
-    continue;
-  }
-  document.write(i + "Submit<br/> ");
-}
-
-var i = 0;
-while (i <= 10) {
-  document.write(i + "Submit<br/> ");
-  i = i + 1
-}
-var i = 0;
-do {
-  document.write(i + "Submit<br/> ");
-  i = i + 1;
-} while (i <= 10);
+var numArray = [10, 15, 20, 25, 30, 35, 40, 50, 55];
+// var result = numArray.filter(function (item) {
+//   return item < 25;
+// });
+// document.write(result);
+// numArray.forEach(function (item) {
+//   document.write(item + "<br/>");
+// });
+var n = numArray.indexOf(35);
+document.write(n);  
