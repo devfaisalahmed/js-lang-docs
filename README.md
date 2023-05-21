@@ -20,5 +20,10 @@
 - **null**
   ```javascript 
   var a = null;
-    ```
+    ```  
+
+| name | value |  
+| string | ``` var str = "Faisal ahmed";``` |  
+
 # Non primitive
+
