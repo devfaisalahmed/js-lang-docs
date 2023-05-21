@@ -1,30 +1,15 @@
 # Primitive Datatype
 
-- **string**
-  ```javascript
-     var str = "Faisal ahmed";
-  ```
-- **number**
-
-  ```javascript
-    var number = 10;
-  ```  
-- **boolean**
-  ```javascript 
-   var a = true/ false;
-    ```
-- **undefined**
-  ```javascript 
-  var a; --যার মান নিরধারন করা হই নি 
-    ```
-- **null**
-  ```javascript 
-  var a = null;
-    ```  
-
 | name | value |  
 | ----- | ------ |  
-| string | ``` var str = "Faisal ahmed";``` |  
+| String | ``` var str = "Faisal ahmed";``` |  
+| Number | ``` var number = 10;``` |  
+| Boolean | ``` var a = true/ false; ``` |  
+| Undefined | ```  var a; যার মান নিরধারন করা হই নি ``` |  
+| Null | ```  var a = null; ``` |  
+
 
 # Non primitive
 
+| Name | Value |  
+| ----- | ------ |  
