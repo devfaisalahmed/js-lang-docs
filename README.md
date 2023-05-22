@@ -139,7 +139,7 @@ document.write(b.concat(a));
 
 এরে তে ব্যবহ্রত লুপঃ forEach, for, for_in
 
-# string
+# string methods
 
 - charAt()
 - concat()
@@ -148,12 +148,15 @@ document.write(b.concat(a));
 - replace(searchValue, replacer)
 - substr(fromIndex, length)
 - substring(indexNumber, length)
-- slice()  
-- toLowerCase()  
+- slice()
+- toLowerCase()
 - toUppercase()
-- trim()  
+- trim()
+
+# Object methods
+
 - getDate() date is a class. To use make an object fast
 - getDay()
 - getFullYear()
-- getHours()  
-- getMilliSeconds() 
+- getHours()
+- getMilliSeconds()
