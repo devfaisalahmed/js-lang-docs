@@ -160,3 +160,53 @@ document.write(b.concat(a));
 - getFullYear()
 - getHours()
 - getMilliSeconds()
+
+# Math functions
+
+- abs()
+- ceil()
+- floor()
+- max()
+- min()
+- random()
+- round()
+
+# Number Object
+
+- Number.isFinite()
+- isInteger()
+- parseFloat()
+- parseInt()
+- toFixed()
+- toString()
+
+# Window Object
+
+- alert()
+- confirm()
+- prompt ()
+- close()
+- setTimeout()
+
+# Navigator Object
+
+```javascript
+var app = navigator.appCodeName();
+var appNam = navigator.appName();
+var appVersion = navigator.appVersion();
+var cookieEnabled = navigator.cookieEnabled();
+var language = navigator.language();
+var userAgent = navigator.userAgent();
+var platforms = navigator.platform();
+```
+
+# JS Event
+
+- onchange()
+- onclick()
+- onmouseover()
+- onmouseout()
+- onkeydown()
+- onload()
+
+# DOM
