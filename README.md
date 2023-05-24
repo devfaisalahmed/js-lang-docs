@@ -175,7 +175,7 @@ document.write(b.concat(a));
 
 - Number.isFinite()
 - isInteger()
-- parseFloat()
+- parseFloat() /\*_ str to number_/
 - parseInt()
 - toFixed()
 - toString()
@@ -210,3 +210,51 @@ var platforms = navigator.platform();
 - onload()
 
 # DOM
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dom Practice</title>
+  </head>
+  <body>
+    <p></p>
+    <button onclick="demo()">Button</button>
+
+    <script>
+      function demo() {
+        var info = document.URL;
+        document.getElementsByTagName("p")[0].innerHTML = info;
+      }
+      function demo() {
+        document.open("text/html", "replace");
+        document.write("<h2> Amer Nam<h2>");
+      }
+      function demo() {
+        let w = window.open();
+        w.document.open();
+        w.document.write("<h2> Hello World</h2>");
+        w.document.close();
+      }
+    </script>
+    /** কিভাবে ইনপুট থেকে ভ্যালু ইনপুট করবো */
+    <input id="num1" /><br /><br />
+    <input id="num2" /><br /><br />
+    <button onclick="addTwoNumber()">add</button>
+    <script>
+      function addTwoNumber() {
+        var num1 = document.getElementById("num1").value;
+        var num2 = document.getElementById("num2").value;
+        let result = parseFloat(num1) + parseFloat(num2);
+        alert(result);
+      }
+    </script>
+  </body>
+</html>
+```
+
+- cookie()
+- domain()
+- lastModified
+- URL
+- replace
