@@ -257,4 +257,8 @@ var platforms = navigator.platform();
 - domain()
 - lastModified
 - URL
-- replace
+- replace  
+- createElement  
+- classList.add/remove  
+- createElement  
+- appendChild 

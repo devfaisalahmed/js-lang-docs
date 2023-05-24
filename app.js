@@ -1,8 +1,8 @@
-function addClass() {
-  var tagList = document.getElementById("myId");
-  tagList.classList.add("text-primary");
-}
-function rmClass() {
-  var tagList = document.getElementById("myId");
-  tagList.classList.remove("text-primary");
+function addItem() {
+  var item = document.getElementById("myInput").ariaValueMax;
+  var listItem = document.createElement("li");
+  listItem.innerHTML = item;
+
+  var myItems = document.getElementById("myItems");
+  myItems.appendChild(listItem);
 }
