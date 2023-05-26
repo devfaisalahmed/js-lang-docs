@@ -252,13 +252,32 @@ var platforms = navigator.platform();
   </body>
 </html>
 ```
-
+- querySelector
 - cookie()
 - domain()
 - lastModified
 - URL
-- replace  
-- createElement  
-- classList.add/remove  
-- createElement  
-- appendChild 
+- replace
+- createElement
+- classList.add/remove
+- createElement
+- appendChild
+
+### uses of appendChild
+
+```html
+<ul id="myItems"></ul>
+<br />
+<input id="myInput" /><br />
+<button onclick="addItem()">add</button>
+<script>
+  function addItem() {
+    var item = document.getElementById("myInput").value;
+    var listItem = document.createElement("li");
+    listItem.innerHTML = item;
+
+    var myItems = document.getElementById("myItems");
+    myItems.appendChild(listItem);
+  }
+</script>
+```
