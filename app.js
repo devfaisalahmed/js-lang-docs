@@ -1,37 +1,21 @@
-/**
- * event - onload , onerror
- * response- response, responseText, responseType, responseUrl, status, statusText
- * function - open(), send(),setRequestHeader()
- */
-const makeRequest = (method, url, data) => {
-  return new Promise((resolve, reject) => {
-    const xhr = new XMLHttpRequest();
-    xhr.open(method, url);
-    xhr.onload = () => {
-      let data = xhr.response;
-      console.log(JSON.parse(data));
-    };
-    xhr.onerror = () => {
-      console.log("error is here");
-    };
-    xhr.setRequestHeader( 'Content-type', 'application/json')
-    xhr.send(JSON.stringify(data));
-  });
-};
-
-const getData = () => {
-  makeRequest("GET", "https://jsonplaceholder.typicode.com/posts")
-  .then((res) => console.log(res));
-}
-getData();
-
-
-const sendData = () => {
-  makeRequest("POST", "https://jsonplaceholder.typicode.com/posts",{
-    title: 'foo',
+fetch("https://jsonplaceholder.typicode.com/posts/1", {
+  method: 'PUT',
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+  body: JSON.stringify({
+    id:1,
+    title: 'fooma',
     body: 'bar',
     userId: 1,
   })
-  .then((res) => console.log(res));
-}
-sendData();
+})
+  .then((res) => {
+    if (!res.ok) {
+      const msg = `${res.status}`;      
+      throw new Error(msg);
+    }
+    return res.json();
+  })
+  .then((res) => console.log(res))
+  .catch((err) => console.log(err));
