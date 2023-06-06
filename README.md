@@ -304,26 +304,25 @@ const makeRequest = (method, url, data) => {
     xhr.onerror = () => {
       console.log("error is here");
     };
-    xhr.setRequestHeader( 'Content-type', 'application/json')
+    xhr.setRequestHeader("Content-type", "application/json");
     xhr.send(JSON.stringify(data));
   });
 };
 
 const getData = () => {
-  makeRequest("GET", "https://jsonplaceholder.typicode.com/posts")
-  .then((res) => console.log(res));
-}
+  makeRequest("GET", "https://jsonplaceholder.typicode.com/posts").then((res) =>
+    console.log(res)
+  );
+};
 getData();
 
-
 const sendData = () => {
-  makeRequest("POST", "https://jsonplaceholder.typicode.com/posts",{
-    title: 'foo',
-    body: 'bar',
+  makeRequest("POST", "https://jsonplaceholder.typicode.com/posts", {
+    title: "foo",
+    body: "bar",
     userId: 1,
-  })
-  .then((res) => console.log(res));
-}
+  }).then((res) => console.log(res));
+};
 sendData();
 
 //sendData();
@@ -344,4 +343,95 @@ const updateSingleData = () => {
   });
 };
 updateSingleData();
+```
+
+### FETCH
+
+```javascript
+fetch("https://jsonplaceholder.typicode.com/posts/1", {
+  method: "PUT",
+  headers: {
+    "Content-type": "application/json; charset=UTF-8",
+  },
+  body: JSON.stringify({
+    id: 1,
+    title: "fooma",
+    body: "bar",
+    userId: 1,
+  }),
+})
+  .then((res) => {
+    if (!res.ok) {
+      const msg = `${res.status}`;
+      throw new Error(msg);
+    }
+    return res.json();
+  })
+  .then((res) => console.log(res))
+  .catch((err) => console.log(err));
+```
+
+### Fetch Async
+
+```javascript
+const makeRequest = async (url, config) => {
+  const res = await fetch(url, config);
+  if (!res.ok) {
+    const msg = `${res.status}`;
+    throw new Error(msg);
+  }
+  const data = await res.json();
+  return data;
+};
+
+const getData = () => {
+  makeRequest("https://jsonplaceholder.typicode.com/posts")
+    .then((res) => console.log(res))
+    .catch((err) => console.log(err));
+};
+getData();
+
+const sendData = () => {
+  makeRequest("https://jsonplaceholder.typicode.com/posts", {
+    method: "POST",
+    body: JSON.stringify({
+      title: "foo",
+      body: "bar",
+      userId: 1,
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  })
+    .then((res) => console.log(res))
+    .catch((err) => console.log(err));
+};
+sendData();
+
+const updateData = () => {
+  makeRequest("https://jsonplaceholder.typicode.com/posts/1", {
+    method: "PUT",
+    body: JSON.stringify({
+      id: 1,
+      title: "foomaaa",
+      body: "bar",
+      userId: 1,
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  })
+    .then((res) => console.log(res))
+    .catch((err) => console.log(err));
+};
+updateData();
+
+const delateData = () => {
+  makeRequest("https://jsonplaceholder.typicode.com/posts/1", {
+    method: "DELETE",
+  })
+    .then((res) => console.log(res))
+    .catch((err) => console.log(err));
+};
+delateData();
 ```
