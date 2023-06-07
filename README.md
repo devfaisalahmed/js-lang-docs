@@ -435,3 +435,84 @@ const delateData = () => {
 };
 delateData();
 ```
+
+# ES6
+
+- ## Spread Operator \*\* means three ...
+
+```javascript
+let a = [1, 2, 3];
+let b = [...a, 4, 5, 6];
+console.log(b);
+```
+
+- ## Rest parameter
+  রেস্ট পারামিটার এর শাথে আরো পারামিটার দিতে চাইলে তা রেস্ট পারামিটার এর আগে দিতে হবে
+
+```javascript
+function calc(...nu) {
+  let sum = 0;
+  for (let i of nu) {
+    sum = sum + i;
+  }
+  console.log(sum);
+}
+calc(1, 2, 3);
+```
+
+- Object
+
+## ES6 Array
+
+- for...in loop
+- for... of loop
+- Map
+  - delete(key)
+  - get(key)
+  - clear()
+  - has(key)
+```javascript
+var myMap = new Map();
+myMap.set("key1", "Bangladesh");
+myMap.set("key2", "India");
+myMap.set("key3", "Srilanka");
+myMap.set("key4", "Natheland");
+myMap.set("key5", "US");
+myMap.set("key6", "UK");
+
+myMap.delete("key1");
+for (let myValue of myMap.values()) {
+  console.log(myValue);
+}
+console.log(myMap.get("key6"));
+if (myMap.has("key7")) {
+  console.log("Yes");
+} else {
+  console.log("No");
+}
+```  
+- set  মেথড এ কোন ডুপ্লিকেট ডাটা রাখা জাই না  
+  - clear()  
+  - delete(value)  
+  - has(value)  
+  - values()  
+  - set.size 
+```javascript
+var mySet = new Set();
+mySet.add("Bangladesh");
+mySet.add("india");
+mySet.add("Napel");
+mySet.add("Bhotan");
+mySet.add("india");
+mySet.add("Srilanka");
+mySet.add("Uk");
+mySet.add("india");
+
+console.log(mySet.values());
+if (mySet.has("Srilanka")) {
+  console.log("OK");
+} else {
+  console.log("no");
+}
+
+```

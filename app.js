@@ -1,62 +1,16 @@
-const makeRequest = async (url, config) => {
-  const res = await fetch(url, config);
-  if (!res.ok) {
-    const msg = `${res.status}`;
-    throw new Error(msg);
-  }
-  const data = await res.json();
-  return data;
-};
+var mySet = new Set();
+mySet.add("Bangladesh");
+mySet.add("india");
+mySet.add("Napel");
+mySet.add("Bhotan");
+mySet.add("india");
+mySet.add("Srilanka");
+mySet.add("Uk");
+mySet.add("india");
 
-const getData = () => {
-  makeRequest("https://jsonplaceholder.typicode.com/posts")
-    .then((res) => console.log(res))
-    .catch((err) => console.log(err));
-};
-getData();
-
-const sendData = () => {
-  makeRequest("https://jsonplaceholder.typicode.com/posts", {
-    method: 'POST',
-    body: JSON.stringify({
-      title: 'foo',
-      body: 'bar',
-      userId: 1,
-    }),
-    headers: {
-      'Content-type': 'application/json; charset=UTF-8',
-    },
-  })
-    .then((res) => console.log(res))
-    .catch((err) => console.log(err));
-};
-sendData();
-
-const updateData = () => {
-  makeRequest("https://jsonplaceholder.typicode.com/posts/1", {
-    method: "PUT",
-    body: JSON.stringify({
-      id: 1,
-      title: "foomaaa",
-      body: "bar",
-      userId: 1,
-    }),
-    headers: {
-      "Content-type": "application/json; charset=UTF-8",
-    },
-  })
-    .then((res) => console.log(res))
-    .catch((err) => console.log(err));
-};
-updateData();
-
-
-const delateData = () => {
-  makeRequest("https://jsonplaceholder.typicode.com/posts/1", {
-    method: "DELETE",
-   
-  })
-    .then((res) => console.log(res))
-    .catch((err) => console.log(err));
-};
-delateData();
+console.log(mySet.values());
+if (mySet.has("Srilanka")) {
+  console.log("OK");
+} else {
+  console.log("no");
+}
